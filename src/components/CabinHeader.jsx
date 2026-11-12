@@ -16,7 +16,8 @@ import {
   Wifi,
   Navigation,
   Info,
-  Car
+  Car,
+  FileDown
 } from 'lucide-react';
 
 export default function CabinHeader({ activeTab, setActiveTab, onOpenDriveMate }) {
@@ -175,6 +176,17 @@ export default function CabinHeader({ activeTab, setActiveTab, onOpenDriveMate }
           <div className="px-2.5 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-cyan-300 font-bold tracking-wider">
             {time}
           </div>
+
+          {/* Download Project Report (PDF) */}
+          <a
+            href="/UI_UX_Project_Report_TrustDrive_AI.pdf"
+            download="UI_UX_Project_Report_TrustDrive_AI.pdf"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-semibold transition-all shadow-sm shadow-emerald-500/20"
+            title="Download the official 13-page UI/UX Project Report (PDF)"
+          >
+            <FileDown className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">Report PDF</span>
+          </a>
 
           {/* DriveMate AI Avatar Quick Trigger */}
           <button
